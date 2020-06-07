@@ -1,24 +1,21 @@
-# README
+# Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* bin/rails generate controller welcome
 
-Things you may want to cover:
+# Heroku
 
-* Ruby version
+* heroku apps:create liviavstudio-test --region eu
 
-* System dependencies
+# Database
 
-* Configuration
+* Set host, user and password in database.yml
+* /bin/rails db:create
 
-* Database creation
+# TODOs:
 
-* Database initialization
+* Create procfile (see: https://devcenter.heroku.com/articles/getting-started-with-rails6 or 
+    https://devcenter.heroku.com/articles/ruby-default-web-server)
 
-* How to run the test suite
+* Fix config.active_storage.service (see: https://devcenter.heroku.com/articles/active-storage-on-heroku )
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 
