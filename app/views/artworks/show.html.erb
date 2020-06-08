@@ -15,5 +15,12 @@
   <%= @artwork.active %>
 </p>
 
+<% if @artwork.image.attached? %>
+<p>
+  <%= image_tag url_for(@artwork.image) %>
+</p>
+<% end %>
+
+
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>
