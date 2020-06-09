@@ -6,21 +6,18 @@
 </p>
 
 <p>
+  <%= image_tag url_for(@artwork.cover_image) if @artwork.cover_image.attached? %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @artwork.description %>
 </p>
 
-<p>
-  <strong>Active:</strong>
-  <%= @artwork.active %>
-</p>
+<%= render @artwork.artwork_parts %>
 
-<% if @artwork.image.attached? %>
-<p>
-  <%= image_tag url_for(@artwork.image) %>
-</p>
-<% end %>
-
+<h3>Add a artwork part:</h3>
+<%= render 'artwork_parts/form' %>
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>

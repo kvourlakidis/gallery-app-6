@@ -1,0 +1,16 @@
+<%= form_with(model: [ @artwork, @artwork.artwork_parts.build ], local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_field :text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :part_image %>
+    <%= form.file_field :part_image %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
