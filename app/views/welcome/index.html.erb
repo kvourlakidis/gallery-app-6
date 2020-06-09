@@ -1,8 +1,35 @@
-<h2>Hello</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div class="flex-container">
+  <div class="row">
+    <div class="column">
+      <% @artworks.each_with_index do |artwork, index| %>
+        <% if index.odd? %>
+          <%= link_to image_tag(url_for(artwork.cover_image)), artwork %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="column">
+      <% @artworks.each_with_index do |artwork, index| %>
+        <% if index.even? %>
+          <%= link_to image_tag(url_for(artwork.cover_image)), artwork %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<% @artworks.each do |artwork| %>
-  <%= link_to  image_tag(url_for(artwork.cover_image)) , artwork %>
-<% end %>
+<!--
+<div class="flex-container">
+<div class="row">
+<div class="column">
+  <a href="#foo"><img src="http://placehold.it/300x300"></a> 
+  <a href="#foo"><img src="http://placehold.it/200x300"></a> 
+  <a href="#foo"><img src="http://placehold.it/300x200"></a> 
+</div>
+<div class="column">
+  <a href="#foo"><img src="http://placehold.it/200x300"></a> 
+  <a href="#foo"><img src="http://placehold.it/100x300"></a> 
+  <a href="#foo"><img src="http://placehold.it/300x300"></a> 
+</div>
+</div>
+</div>
+ -->

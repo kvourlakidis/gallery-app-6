@@ -1,0 +1,50 @@
+@import "variables";
+
+body {
+    background-color: $page-background-colour;
+    color: #333;
+    // margin: 33px; 
+    padding-top: $navigation-bar-height;
+}
+  
+body, p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: $font-size;
+    line-height: 18px; 
+}
+  
+pre {
+    background-color: #eee;
+    padding: 10px;
+    font-size: 11px; 
+}
+  
+a {
+    color: #000; 
+}
+
+a:visited {
+    color: #666; 
+}
+
+a:hover {
+    color: #fff;
+    background-color: #000; 
+}
+
+th {
+    padding-bottom: 5px; 
+}
+
+td {
+    padding: 0 5px 7px; 
+}
+
+div.field, div.actions {
+    margin-bottom: 10px; 
+}
+
+
+label {
+    display: block; 
+}

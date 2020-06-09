@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <!-- %= favicon_link_tag asset_path('image-name.png') % -->
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
@@ -23,19 +23,19 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <nav class="container" role="navigation">
+    <nav role="navigation">
         <%= render 'layouts/header' %>
     </nav>
 
     <%= yield %>
 
     <footer>
-      <div class="container">
         <%= render 'layouts/footer' %>
-      </div>
     </footer>
   </body>
 </html>

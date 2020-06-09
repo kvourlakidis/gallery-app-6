@@ -1,0 +1,50 @@
+  footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $footer-margin-height;
+    margin-bottom: 0;
+    color: #cccccc;
+    background-color: $footer-background-colour;
+    padding: 1.2em;
+  
+    body[data-controller="welcome"][data-action="home"] & {
+      margin-top: 0;
+    }
+  
+    a { color: inherit;
+      &:visited { color: inherit; }
+      &:hover   {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  
+    .footer-info {
+      text-align: left;
+      float: left;
+      @media screen and (max-width: $screen-ms) {
+        text-align: center;
+        float: none;
+      }
+      @media screen and (min-width: $screen-lg) {
+        text-align: center;
+        float: none;
+      }
+    }
+  
+    .footer-social-links {
+      font-size: 3em;
+      float: right;
+      a:hover { color: white; }
+  
+      @media screen and (max-width: $screen-ms) {
+        padding-bottom: 0.5em;
+        float: none;
+        text-align: center;
+      }
+    }
+  }
