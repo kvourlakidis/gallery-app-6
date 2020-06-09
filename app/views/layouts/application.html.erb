@@ -1,7 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
-    <title>GalleryApp6</title>
+    <!-- %= favicon_link_tag asset_path('image-name.png') % -->
+    
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="application-name" content="Art Gallery"/>
+    <meta name="author" content="Livia Vourlakidou"/>
+    <meta name="description" content="Guildford based artist"/>
+    <meta name="keywords" content="art, contemporary art, oil painting, painting"/>
+
+    <% if yield(:title).empty? %>
+      <title><%= ENV['APP_TITLE'] %></title>
+    <% else %>
+      <title><%= yield(:title) %>|<%= ENV['APP_TITLE'] %></title>
+    <% end %>
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +26,20 @@
   </head>
 
   <body>
+    <nav class="container" role="navigation">
+        <%= render 'layouts/header' %>
+    </nav>
+
     <%= yield %>
+
+    <footer>
+      <div class="container">
+        <%= render 'layouts/footer' %>
+      </div>
+    </footer>
   </body>
 </html>
+
+<% if Rails.env == 'development' %>
+  <%= console %>
+<% end %>
