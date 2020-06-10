@@ -12,6 +12,7 @@
     margin-right: auto;
     margin-right: auto;
     height: auto;
+    color: white;
 
     .brand {
       float: left;
@@ -20,15 +21,15 @@
       line-height: $navigation-bar-height;
       padding-left: 15px;
       padding-right: 15px;
-      color: $page-background-colour;
+      // color: $page-background-colour;
     }
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
-    float: left;
+    float: right;
     display: block;
-    color: #f2f2f2;
+    color: white;
     line-height: $navigation-bar-height;
     padding-left: 15px;
     padding-right: 15px;

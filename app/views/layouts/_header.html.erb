@@ -5,9 +5,12 @@
 
 <div class="topnav" id="myTopnav">
   <div class="brand">Livia Vourlakidou</div>
-  <%= link_to "Gallery", root_path %>
+   <a href=<%= ENV['EMAIL_LINK'] %> target="_blank" aria-hidden="true"><i class="fa fa-envelope"></i></a>
+  <a href=<%= ENV['INSTAGRAM_LINK'] %> target="_blank" aria-hidden="true"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.behance.net/liviavourlak" target="_blank" ><i class="fa fa-behance"></i></a>
   <%= link_to "Artworks", artworks_path %>
   <a href="#about">Contact</a>
+  <%= link_to "Work", root_path %>
   <a href="javascript:void(0);" class="icon" onclick="toggleResponsive()">
     <i class="fa fa-bars"></i>
   </a>

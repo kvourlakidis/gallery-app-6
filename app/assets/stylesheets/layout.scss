@@ -2,7 +2,7 @@
 
 body {
     background-color: $page-background-colour;
-    color: #333;
+    color: white;
     // margin: 33px; 
     padding-top: $navigation-bar-height;
 }
@@ -24,7 +24,7 @@ a {
 }
 
 a:visited {
-    color: #666; 
+    // color: #666; 
 }
 
 a:hover {
