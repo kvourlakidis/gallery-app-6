@@ -18,4 +18,4 @@
 
 * Fix config.active_storage.service (see: https://devcenter.heroku.com/articles/active-storage-on-heroku )
 
-* 
+* Configure credentials for email address and social media accounts as environment variables
