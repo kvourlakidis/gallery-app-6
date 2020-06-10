@@ -4,11 +4,11 @@
 -->
 
 <div class="topnav" id="myTopnav">
-  <a class="brand active" href="#home">Livia Vourlakidou</a>
-  <a href="#news">Art</a>
-  <a href="#contact">Photography</a>
+  <div class="brand">Livia Vourlakidou</div>
+  <%= link_to "Gallery", root_path %>
+  <%= link_to "Artworks", artworks_path %>
   <a href="#about">Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <a href="javascript:void(0);" class="icon" onclick="toggleResponsive()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -16,7 +16,7 @@
 
 <script>
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
+function toggleResponsive() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";

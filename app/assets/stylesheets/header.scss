@@ -12,6 +12,16 @@
     margin-right: auto;
     margin-right: auto;
     height: auto;
+
+    .brand {
+      float: left;
+      font-size: $font-size-large;
+      display: block;
+      line-height: $navigation-bar-height;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: $page-background-colour;
+    }
   }
   
   /* Style the links inside the navigation bar */
@@ -24,10 +34,6 @@
     padding-right: 15px;
     text-decoration: none;
     height: 100%;
-  }
-
-  .topnav a.brand {
-    font-size: $font-size-large;
   }
   
   /* Change the color of links on hover */
@@ -67,6 +73,9 @@
       right: 0;
       top: 0;
       height: $navigation-bar-height;
+    }
+    .topnav.responsive .brand {
+      float: none;
     }
     .topnav.responsive a {
       float: none;
