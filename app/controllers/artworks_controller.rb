@@ -25,7 +25,7 @@ class ArtworksController < ApplicationController
   # POST /artworks.json
   def create
     @artwork = Artwork.new(artwork_params)
-
+    resize_image
     respond_to do |format|
       if @artwork.save
         format.html { redirect_to @artwork, notice: 'Artwork was successfully created.' }
@@ -40,6 +40,7 @@ class ArtworksController < ApplicationController
   # PATCH/PUT /artworks/1
   # PATCH/PUT /artworks/1.json
   def update
+    resize_image
     respond_to do |format|
       if @artwork.update(artwork_params)
         format.html { redirect_to @artwork, notice: 'Artwork was successfully updated.' }
@@ -66,7 +67,7 @@ class ArtworksController < ApplicationController
     def set_artwork
       @artwork = Artwork.find(params[:id])
     end
-
+    
     # Only allow a list of trusted parameters through.
     def artwork_params
       params.require(:artwork).permit(
@@ -74,5 +75,11 @@ class ArtworksController < ApplicationController
         :description, 
         :active, 
         :cover_image)
-    end
+      end
+
+      def resize_image
+        cover_image = artwork_params[:cover_image]
+        mini_img = MiniMagick::Image.new(cover_image.tempfile.path)
+        mini_img.resize('500x500')
+      end
 end

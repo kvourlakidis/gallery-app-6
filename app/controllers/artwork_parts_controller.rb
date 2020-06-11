@@ -15,8 +15,9 @@ class ArtworkPartsController < ApplicationController
   # POST /artwork_parts
   # POST /artwork_parts.json
   def create
-
     @artwork_part = @artwork.artwork_parts.new(artwork_part_params)
+
+    resize_image
 
     respond_to do |format|
       if @artwork_part.save
@@ -51,5 +52,11 @@ class ArtworkPartsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def artwork_part_params
       params.require(:artwork_part).permit(:text, :artwork_id, :part_image)
+    end
+
+    def resize_image
+      image = artwork_part_params[:part_image]
+      mini_img = MiniMagick::Image.new(image.tempfile.path)
+      mini_img.resize('500x500')
     end
 end
