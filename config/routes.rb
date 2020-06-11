@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :artworks do
     resources :artwork_parts
   end
