@@ -9,5 +9,5 @@
 <div class="blog control">
     <%= link_to 'Destroy', [artwork_part.artwork, artwork_part], 
         method: :delete, 
-        data: { confirm: 'Are you sure?' } %>
+        data: { confirm: 'Are you sure?' } if admin_signed_in? %>
 </div>

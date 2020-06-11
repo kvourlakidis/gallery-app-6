@@ -9,7 +9,12 @@
   <a href=<%= ENV['INSTAGRAM_LINK'] %> target="_blank" aria-hidden="true"><i class="fa fa-instagram"></i></a>
   <a href=<%= ENV['BEHANCE_LINK']   %> target="_blank" aria-hidden="true"><i class="fa fa-behance"  ></i></a>
   <a href=<%= ENV['VIMEO_LINK']     %> target="_blank" aria-hidden="true"><i class="fa fa-vimeo"    ></i></a>
-  <%= link_to "Artworks", artworks_path %>
+  <% if user_signed_in? %>
+    <%= link_to "Artworks", artworks_path %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign In", new_user_session_path %>
+  <% end %>
   <a href="#about">Contact</a>
   <%= link_to "Work", root_path %>
   <a href="javascript:void(0);" class="icon" onclick="toggleResponsive()">

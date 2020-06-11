@@ -1,6 +1,7 @@
 class ArtworkPartsController < ApplicationController
   before_action :set_artwork
   before_action :set_artwork_part, only: [:show, :destroy]
+  before_action :authenticate_admin!, except: [:show]
 
   # GET /artwork_parts/1
   # GET /artwork_parts/1.json
@@ -56,7 +57,9 @@ class ArtworkPartsController < ApplicationController
 
     def resize_image
       image = artwork_part_params[:part_image]
-      mini_img = MiniMagick::Image.new(image.tempfile.path)
-      mini_img.resize('500x500')
+      unless image.nil?
+        mini_img = MiniMagick::Image.new(image.tempfile.path)
+        mini_img.resize('500x500')
+      end
     end
 end

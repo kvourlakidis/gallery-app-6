@@ -7,5 +7,5 @@ class User < ApplicationRecord
          :rememberable, 
          :validatable
 
-  # scope :admin, -> { where(admin: true) }
+  scope :admin, -> { where(admin: true) }
 end
