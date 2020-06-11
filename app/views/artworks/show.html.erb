@@ -1,18 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<p class="blog title">
   <%= @artwork.title %>
 </p>
 
-<p>
+<div class="blog">
   <%= image_tag url_for(@artwork.cover_image) if @artwork.cover_image.attached? %>
-</p>
+</div>
 
-<p>
-  <strong>Description:</strong>
+<div class="blog">
   <%= @artwork.description %>
-</p>
+</div>
 
 <%= render @artwork.artwork_parts %>
 

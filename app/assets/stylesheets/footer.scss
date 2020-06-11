@@ -7,11 +7,10 @@
     left: 0px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: $footer-margin-height;
-    margin-bottom: 0;
     color: #cccccc;
     background-color: $footer-background-colour;
-    padding: 1.2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
   
     body[data-controller="welcome"][data-action="home"] & {
       margin-top: 0;
@@ -26,13 +25,28 @@
     }
   
     .footer-info {
+      font-size: $font-size-small;
+      display: block;
+      width: 100%;
+      padding: 0 4px;
       text-align: left;
-      float: left;
+
+      .left {
+        float: left;
+      }
+
+      .right {
+        float: right;
+      }
       @media screen and (max-width: $screen-ms) {
+        .left { float: none; }
+        .right { float: none; }
         text-align: center;
         float: none;
       }
       @media screen and (min-width: $screen-lg) {
+        .left { float: none; }
+        .right { float: none; }
         text-align: center;
         float: none;
       }

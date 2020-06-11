@@ -1,13 +1,13 @@
-<p>
+<div class="blog">
   <%= image_tag url_for(artwork_part.part_image) if artwork_part.part_image.attached? %>
-</p>
+</div>
 
-<p>
+<div class="blog">
     <%= artwork_part.text %>
-</p>
+</div>
 
-<p>
+<div class="blog control">
     <%= link_to 'Destroy', [artwork_part.artwork, artwork_part], 
         method: :delete, 
         data: { confirm: 'Are you sure?' } %>
-</p>
+</div>

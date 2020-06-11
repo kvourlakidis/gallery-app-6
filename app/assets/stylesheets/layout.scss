@@ -2,29 +2,21 @@
 
 body {
     background-color: $page-background-colour;
-    color: white;
-    // margin: 33px; 
     padding-top: $navigation-bar-height;
+    padding-bottom: $footer-margin-height;
 }
   
-body, p, ol, ul, td {
-    font-family: verdana, arial, helvetica, sans-serif;
+body, a, p, ol, ul, td {
+    font-family: 'Michroma';
     font-size: $font-size;
-    line-height: 18px; 
+    line-height: $line-height;
+    color: $primary-colour;
 }
   
 pre {
     background-color: #eee;
     padding: 10px;
     font-size: 11px; 
-}
-  
-a {
-    color: #000; 
-}
-
-a:visited {
-    // color: #666; 
 }
 
 a:hover {
@@ -47,4 +39,28 @@ div.field, div.actions {
 
 label {
     display: block; 
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.blog {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+    // text-justify: distribute;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.control {
+    text-align: right;
 }
