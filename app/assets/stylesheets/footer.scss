@@ -7,29 +7,22 @@
     left: 0px;
     margin-left: auto;
     margin-right: auto;
-    color: #cccccc;
-    background-color: $footer-background-colour;
+    color: $footer-font-color;
+    background-color: $footer-background-color;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-size: $font-size;
   
-    body[data-controller="welcome"][data-action="home"] & {
-      margin-top: 0;
-    }
-  
-    a { color: inherit;
+    a { 
+      color: $grey;
+      text-decoration: none;
       &:visited { color: inherit; }
-      &:hover   {
-        color: white;
-        text-decoration: none;
-      }
     }
   
     .footer-info {
-      font-size: $font-size-small;
-      display: block;
-      width: 100%;
-      padding: 0 4px;
-      text-align: left;
+      width: 90%;
+      padding-left: 10px;
+      line-height: 1.5em;
 
       .left {
         float: left;
@@ -38,29 +31,12 @@
       .right {
         float: right;
       }
+
       @media screen and (max-width: $screen-ms) {
         .left { float: none; }
         .right { float: none; }
         text-align: center;
         float: none;
-      }
-      @media screen and (min-width: $screen-lg) {
-        .left { float: none; }
-        .right { float: none; }
-        text-align: center;
-        float: none;
-      }
-    }
-  
-    .footer-social-links {
-      font-size: 3em;
-      float: right;
-      a:hover { color: white; }
-  
-      @media screen and (max-width: $screen-ms) {
-        padding-bottom: 0.5em;
-        float: none;
-        text-align: center;
       }
     }
   }

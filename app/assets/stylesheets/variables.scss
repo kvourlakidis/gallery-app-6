@@ -1,21 +1,25 @@
-$navigation-bar-height: 75px;
+$navbar-height: 75px;
 $footer-margin-height:  35px;
-$navbar-background-colour: rgb(37, 31, 31);
-$footer-background-colour: #2c2a2a;
-
-$page-background-colour: #222;
-$page-background-colour-secondary: #777777;
-
-$primary-colour: #e4dddd;
 
 $twitter-blue: #4099FF;
 $facebook-blue: #3b5998;
 
-$font-size: 15px;
+$white: #eee;
+$black: #333;
+$grey: #777;
+$red: #c00;
+
+$page-background-color: $white;
+$navbar-background-color: $black;
+$footer-background-color: $black;
+$page-font-color: $black;
+$navbar-font-color: $white;
+$footer-font-color: $white;
+
+$font-size: 16px;
 $font-size-small: 12px;
-$font-size-large: 30px;
-$line-height: 18px;
-$text-color: rgb(241, 220, 220);
+$font-size-large: 20px;
+$line-height: 16px;
 
 $screen-xs: 320px;
 $screen-sm: 480px;

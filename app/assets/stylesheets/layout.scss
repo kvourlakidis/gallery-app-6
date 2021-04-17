@@ -1,8 +1,8 @@
 @import "variables";
 
 body {
-    background-color: $page-background-colour;
-    padding-top: $navigation-bar-height;
+    background-color: $page-background-color;
+    padding-top: $navbar-height;
     padding-bottom: $footer-margin-height;
 }
   
@@ -10,7 +10,8 @@ body, a, p, ol, ul, td {
     font-family: 'Michroma';
     font-size: $font-size;
     line-height: $line-height;
-    color: $primary-colour;
+    word-spacing: 10px;
+    color: $page-font-color;
 }
   
 pre {
@@ -63,4 +64,21 @@ label {
 
 .control {
     text-align: right;
+}
+
+.contacts {
+    max-width: 500px;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: $font-size;
+    line-height: 4em;
+    text-align: justify;
+    .left {
+        width: 50%;
+        float: left;
+    }
+    .right {
+        width: 50%;
+        float: right;
+    }
 }
