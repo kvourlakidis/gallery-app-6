@@ -9,6 +9,14 @@ class Artwork < ApplicationRecord
     scope :active, -> { where(active: true) }
     validate :image_type
 
+    def next
+        Artwork.where("id > ?", id).first || Artwork.first
+    end
+    
+    def prev
+        Artwork.where("id < ?", id).first || Artwork.last
+    end
+
     private
 
     def image_type 

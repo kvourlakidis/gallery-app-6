@@ -1,5 +1,6 @@
 class ArtworksController < ApplicationController
   before_action :set_artwork, only: [:show, :edit, :update, :destroy]
+  before_action :set_prev_and_next, only: [:show]
   before_action :authenticate_admin!, except: [:show]
 
   # GET /artworks
@@ -67,6 +68,11 @@ class ArtworksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_artwork
       @artwork = Artwork.find(params[:id])
+    end
+
+    def set_prev_and_next
+      @next_artwork = @artwork.next
+      @prev_artwork = @artwork.prev
     end
     
     # Only allow a list of trusted parameters through.

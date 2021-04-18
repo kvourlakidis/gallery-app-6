@@ -19,7 +19,7 @@
 <div class="blog"><%= render 'artwork_parts/form' if admin_signed_in? %></div>
 
 <div class="blog navigation-buttons">
-  <a href="#blank"class="fa fa-pull-left fa-chevron-left"></a>
-  <a href="#blank" class="fa fa-home"></a>
-  <a href="#" class="fa fa-pull-right fa-chevron-right"></a>
+  <%= link_to "", url_for(@prev_artwork), class: "fa fa-pull-left fa-chevron-left" %>
+  <%= link_to "", root_path, class: "fa fa-home" %>
+  <%= link_to "", url_for(@next_artwork), class: "fa fa-pull-right fa-chevron-right" %>
 </div>
