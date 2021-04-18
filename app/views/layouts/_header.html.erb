@@ -4,22 +4,34 @@
 -->
 
 <div class="topnav" id="myTopnav">
-  <div class="brand">Livia Vourlakidou</div>
-  <a href=mailto:<%= ENV['EMAIL_LINK'] %> aria-hidden="true"><i class="fa fa-envelope" ></i></a>
-  <a href=<%= ENV['INSTAGRAM_LINK'] %> target="_blank" aria-hidden="true"><i class="fa fa-instagram"></i></a>
-  <a href=<%= ENV['BEHANCE_LINK']   %> target="_blank" aria-hidden="true"><i class="fa fa-behance"  ></i></a>
-  <a href=<%= ENV['VIMEO_LINK']     %> target="_blank" aria-hidden="true"><i class="fa fa-vimeo"    ></i></a>
+  
+  <div class="brand">LIVIA VOURLAKIDOU</div>
+  
+  <div class="social-media-icons">
+    <a href=<%= ENV['EMAIL_LINK'] %> aria-hidden="true"><i class="fa fa-envelope" ></i></a>
+    <a href=<%= ENV['INSTAGRAM_LINK'] %> target="_blank" aria-hidden="true"><i class="fa fa-instagram"></i></a>
+    <a href=<%= ENV['BEHANCE_LINK']   %> target="_blank" aria-hidden="true"><i class="fa fa-behance"  ></i></a>
+    <a href=<%= ENV['VIMEO_LINK']     %> target="_blank" aria-hidden="true"><i class="fa fa-vimeo"    ></i></a>
+  </div>
+  
   <% if user_signed_in? %>
     <%= link_to "Artworks", artworks_path %>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   <% else %>
     <%= link_to "Sign In", new_user_session_path %>
   <% end %>
+  
   <%= link_to "Contact", contact_path %>
+  
   <%= link_to "Work", root_path %>
-  <a href="javascript:void(0);" class="icon" onclick="toggleResponsive()">
-    <i class="fa fa-bars"></i>
-  </a>
+
+  <!-- HAMBURGER BUTTON -->
+  <button type="button" class="hamburger" onclick="toggleResponsive()">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
 </div>
 
 

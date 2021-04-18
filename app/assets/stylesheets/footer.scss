@@ -20,8 +20,8 @@
     }
   
     .footer-info {
-      width: 90%;
-      padding-left: 10px;
+      padding-left: 50px;
+      padding-right: 50px;
       line-height: 1.5em;
 
       .left {
@@ -32,11 +32,10 @@
         float: right;
       }
 
-      @media screen and (max-width: $screen-ms) {
+      @media screen and (max-width: $screen-md) {
         .left { float: none; }
         .right { float: none; }
         text-align: center;
-        float: none;
       }
     }
   }

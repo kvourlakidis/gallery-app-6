@@ -1,3 +1,5 @@
+<% provide(:title, @artwork.title) %>
+
 <p id="notice"><%= notice %></p>
 
 <p class="blog title">
@@ -14,6 +16,10 @@
 
 <%= render @artwork.artwork_parts %>
 
-<%= render 'artwork_parts/form' if admin_signed_in? %>
+<div class="blog"><%= render 'artwork_parts/form' if admin_signed_in? %></div>
 
-<%= link_to 'Home', root_path, class: 'blog' %>
+<div class="blog navigation-buttons">
+  <a href="#blank"class="fa fa-pull-left fa-chevron-left"></a>
+  <a href="#blank" class="fa fa-home"></a>
+  <a href="#" class="fa fa-pull-right fa-chevron-right"></a>
+</div>
